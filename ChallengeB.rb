@@ -85,6 +85,9 @@ live_loop :foo3 do
   sample :perc_snap2, amp: 0.75
   sleep 0.5
   sample :perc_snap2, amp: 0.5
-  sleep 6
+  sleep 4
+  sample :perc_snap2, amp: 0.75
+  sleep 0.5
+  sample :perc_snap2, amp: 0.5
   
 end
