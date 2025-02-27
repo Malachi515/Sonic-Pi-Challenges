@@ -109,9 +109,12 @@ live_loop :main3 do
   sleep 0.25
 end
 
-sleep 12
+sleep 16
 
 live_loop :main4 do
-  sleep 2
-  sample :hat_metal
+  sleep 1
+  1000.times do
+    sample :hat_metal
+    sleep 2
+  end
 end
