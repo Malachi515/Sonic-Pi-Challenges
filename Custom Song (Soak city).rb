@@ -1,4 +1,7 @@
-# MAIN + SIDE TRACK
+# MAIN + SIDE TRACK"
+
+splash = "C:/Users/malachi_bayyan/Downloads/WATER SPLASH SOUND EFFECT  SOUND FX.mp3"
+
 
 use_bpm 103
 use_synth :piano
@@ -11,34 +14,68 @@ live_loop :main1 do
 end
 
 live_loop :main2 do
+  6.times do
+    
+    play :d5
+    play :f5
+    play :a5
+    sleep 0.75
+    
+    play :d5
+    play :e5
+    play :a5
+    sleep 0.75
+    
+    play :d5
+    play :f5
+    play :a5
+    sleep 1
+    
+    play :d5
+    play :g5
+    play :as5
+    sleep 0.75
+    
+    play :d5
+    play :e5
+    play :as5
+    
+    sleep 0.75
+  end
   
-  
-  play :d5
-  play :f5
-  play :a5
-  sleep 0.75
-  
-  play :d5
-  play :e5
-  play :a5
-  sleep 0.75
-  
-  play :d5
-  play :f5
-  play :a5
-  sleep 1
-  
-  play :d5
-  play :g5
-  play :as5
-  sleep 0.75
-  
-  play :d5
-  play :e5
-  play :as5
-  
-  sleep 0.75
-  
+  live_loop :main6 do
+    
+    
+    play :d5
+    play :f5
+    play :a5
+    sample :bd_pure, amp: 3
+    sleep 0.75
+    
+    play :d5
+    play :e5
+    play :a5
+    sample :bd_pure, amp: 3
+    sleep 0.75
+    
+    play :d5
+    play :f5
+    play :a5
+    sample :bd_pure, amp: 3
+    sleep 1
+    
+    play :d5
+    play :g5
+    play :as5
+    sleep 0.75
+    
+    play :d5
+    play :e5
+    play :as5
+    
+    sleep 0.75
+    
+  end
 end
 
 sleep 8
@@ -51,7 +88,9 @@ live_loop :main4 do
   end
 end
 
-sleep 16
+sleep 15.5
+sample splash, amp: 5
+sleep 0.5
 
 live_loop :main3 do
   
@@ -59,6 +98,7 @@ live_loop :main3 do
   sleep 0.25
   
   play :f6, amp: 2
+  
   sleep 0.25
   
   play :a6, amp: 2
@@ -118,3 +158,4 @@ live_loop :main3 do
   play :a6, amp: 2
   sleep 0.25
 end
+
