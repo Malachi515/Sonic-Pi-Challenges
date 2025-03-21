@@ -2,17 +2,26 @@
 
 splash = "C:/Users/malachi_bayyan/Downloads/WATER SPLASH SOUND EFFECT  SOUND FX.mp3"
 
-
 use_bpm 103
 use_synth :piano
 
+main1note = [:d2, :d3]
+main1time = [8, 8]
+
+n = 0
 x = 2
+
+define :main1notecode do |note_1, note_2|
+  play note_1, sustain: 3
+  play note_2, sustain: 3
+  sleep (main1time[n])
+  n = n + 1
+  n = 0
+end
 
 live_loop :main1 do
   8.times do
-    play :d2, sustain: 3
-    play :d3, sustain: 3
-    sleep 8
+    main1notecode :d2, :d3
   end
   stop
 end
